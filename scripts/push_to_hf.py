@@ -41,13 +41,20 @@ tags:
   - ocr
   - yolo
   - convnext
+  - minoan
+  - mycenaean
+  - greek
 ---
 
-# BOTHROS — Aegean sign reading from photographs (Linear A + Linear B)
+# BOTHROS — Linear A & Linear B sign reading from photographs
 
 Weights for the [BOTHROS](https://github.com/jmacdonald263/bothros) pipeline:
 photograph an ancient Aegean tablet, get the signs on it by catalogue code and
 reading.
+
+> **The name** — a *bóthros* (βόθρος) is the pit Odysseus digs in *Odyssey* 11,
+> pouring libations so the spirits of the dead rise to speak with him. Apt for a
+> tool that reads scripts silent for three thousand years.
 
 - **`yolo_aegean_unified.pt`** — one YOLO11s detector localising signs for *both*
   scripts (sign detection is class-agnostic; Linear A and Linear B signs are
