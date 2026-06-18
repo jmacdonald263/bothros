@@ -77,7 +77,8 @@ python3 -m bothros read your_tablet.jpg --script la   # or --script lb
 The pipeline source code is MIT (see the GitHub repo). Non-commercial use only.
 
 ## Citation
-See https://github.com/jmacdonald263/bothros (Zenodo DOI on release).
+DOI [10.5281/zenodo.20746759](https://doi.org/10.5281/zenodo.20746759) ·
+code + docs: https://github.com/jmacdonald263/bothros
 """
 
 

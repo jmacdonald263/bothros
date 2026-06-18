@@ -1,5 +1,9 @@
 # BOTHROS — Aegean sign reading from photographs
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20746759.svg)](https://doi.org/10.5281/zenodo.20746759)
+[![weights: Hugging Face](https://img.shields.io/badge/weights-Hugging%20Face-yellow)](https://huggingface.co/JMacD263/bothros)
+[![code: MIT](https://img.shields.io/badge/code-MIT-green)](LICENSE)
+
 **Photograph an ancient Aegean tablet → get the signs on it, identified by
 catalogue code and (where known) phonetic value.** Linear A and Linear B.
 
@@ -127,10 +131,12 @@ standard flat character error rate, not a more lenient per-line variant).
 
 ```bibtex
 @software{bothros2026,
-  title  = {BOTHROS: Aegean sign reading from photographs},
-  author = {MacDonald, Jamie},
-  year   = {2026},
-  url    = {https://github.com/jmacdonald263/bothros}
+  title     = {BOTHROS: Aegean sign reading from photographs},
+  author    = {MacDonald, Jamie},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.20746759},
+  url       = {https://doi.org/10.5281/zenodo.20746759}
 }
 ```
 
