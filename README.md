@@ -147,8 +147,10 @@ standard flat character error rate, not a more lenient per-line variant).
 
 ## Acknowledgements
 
-Built on DĀMOS (Linear B), SigLA and GORILA (Linear A), the lineara.xyz /
-LinearBExplorer corpora, LiBER (Linear B photographs), Ultralytics YOLO, and
-timm. Detector
+Built on [DĀMOS](https://damos.hf.uio.no) (Linear B), [SigLA](https://sigla.phis.me)
+and GORILA (Linear A), the [lineara.xyz](https://lineara.xyz) /
+[LinearBExplorer](https://github.com/mwenge/LinearBExplorer) corpora,
+[LiBER](https://liber.cnr.it) (Linear B photographs), Ultralytics YOLO, and timm.
+Detector
 architecture is extensible — the unified Aegean base can be fine-tuned onto
 Cretan Hieroglyphic, Cypro-Minoan, or other scripts.

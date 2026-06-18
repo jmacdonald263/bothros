@@ -8,7 +8,7 @@ To try the pipeline on a real tablet:
 
 1. Obtain a tablet image from one of the open corpora, e.g.:
    - Linear A: https://sigla.phis.me/ or https://lineara.xyz
-   - Linear B: https://damos.hf.uio.no/ or LinearBExplorer
+   - Linear B: https://damos.hf.uio.no/ or [LinearBExplorer](https://github.com/mwenge/LinearBExplorer)
 2. Run:
    ```bash
    python3 -m bothros read path/to/your_tablet.jpg --script la   # or --script lb
