@@ -32,8 +32,8 @@ held-out tablet contributes any training box.
 | Linear A | 0.25 | 64.9% | 70% | 61% |
 | Linear B | 0.30 | 76.5% | 86% | 69% |
 
-Detection mAP@50 on the Linear B held-out is 0.466 (Linear A not separately
-measured) — **the detector is the pipeline
+Detection mAP@50 (shipped detector, held-out): **Linear A 0.60** (n=51, clean
+GT) / **Linear B ~0.55** (n=24, GT registration imperfect → conservative) — **the detector is the pipeline
 bottleneck.** Held-out recall caps end-to-end performance; the classifiers score
 substantially higher on the signs the detector does find.
 

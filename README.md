@@ -56,12 +56,13 @@ enforced at extraction time, not just at evaluation time). Metrics:
 | Pipeline E2E sign top-5 | " | 75.3% | 67.0% | 79.3% |
 | **Pipeline per-line F1** | detect+classify+align, in-line | 64.9% | 76.5% | — |
 | **CER** (lower is better) | character error rate (flat) | ~0.48 | **0.44** | 0.669 |
-| Detection mAP@50 | detector only | n/m | ~0.47 | 0.78 |
+| Detection mAP@50 | detector only | 0.60 | ~0.55* | 0.78 |
 
-*All pipeline numbers use the single shipped `aegean-unified` detector (E2E at
-high recall; per-line F1 + CER at the precise operating points, conf-filter 0.25
-LA / 0.30 LB). Detection mAP separately measured for Linear B only (n/m = not
-measured for Linear A; both scripts are detector-recall-bound).*
+*All pipeline numbers use the single shipped `aegean-unified` detector — E2E at
+high recall; per-line F1 + CER at the precise operating points (conf-filter 0.25
+LA / 0.30 LB). Detection mAP@50 measured vs held-out GT boxes (LA n=51, clean
+GT; LB n=24, GT registration imperfect → conservative figure). Both scripts are
+detector-recall-bound.*
 
 **Honest reading of this table:**
 
