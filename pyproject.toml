@@ -16,8 +16,6 @@ dependencies = [
     "timm>=1.0",
     "ultralytics>=8.3",
     "pillow>=10",
-    "numpy>=1.24",
-    "opencv-python>=4.8",
     "huggingface_hub>=0.23",
 ]
 

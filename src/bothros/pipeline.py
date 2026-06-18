@@ -13,12 +13,10 @@ import json
 from dataclasses import dataclass, asdict
 from pathlib import Path
 
-import cv2
-import numpy as np
 import timm
 import torch
 import torchvision.transforms as T
-from PIL import Image
+from PIL import Image, ImageDraw
 from ultralytics import YOLO
 
 # Per-script defaults established by the conf-filter sweep (docs/BENCHMARKS.md).
@@ -132,14 +130,14 @@ def _dedup(signs, det_confs):
 
 
 def render_overlay(image_path, signs, out_path):
-    img = cv2.imread(str(image_path))
+    img = Image.open(image_path).convert("RGB")
+    draw = ImageDraw.Draw(img)
     for s in signs:
         x, y, w, h = s.box
-        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 200, 0), 2)
+        draw.rectangle([x, y, x + w, y + h], outline=(0, 200, 0), width=2)
         label = s.code + (f"/{s.reading}" if s.reading else "")
-        cv2.putText(img, label, (x, max(0, y - 4)),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 200, 0), 1, cv2.LINE_AA)
-    cv2.imwrite(str(out_path), img)
+        draw.text((x, max(0, y - 11)), label, fill=(0, 200, 0))
+    img.save(str(out_path))
 
 
 def signs_to_json(signs):
