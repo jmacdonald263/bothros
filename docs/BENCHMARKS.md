@@ -11,11 +11,11 @@ how earlier leaked numbers were found and corrected.
 |---|---|---|---|---|
 | Classifier oracle top-1 | **79.3%** | 64.5% | 74% | LA |
 | Classifier oracle top-5 | 83.9% | 73.8% | 91% | DS |
-| Pipeline E2E sign top-1 | **66.9%** | **62.6%** | 56.3% | LA, LB |
-| Pipeline E2E sign top-5 | 72.4% | 64.8% | 79.3% | DS |
+| Pipeline E2E sign top-1 | **68.7%** | **63.8%** | 56.3% | LA, LB |
+| Pipeline E2E sign top-5 | 75.3% | 67.0% | 79.3% | DS |
 | Pipeline per-line F1 | 64.9% | 76.5% | — | — |
-| CER (flat, lower better) | ~0.49 | **0.44** | 0.669 | LA, LB |
-| Detection mAP@50 | ~0.47 | ~0.47 | 0.78 | DS |
+| CER (flat, lower better) | ~0.48 | **0.44** | 0.669 | LA, LB |
+| Detection mAP@50 | n/m | ~0.47 | 0.78 | DS |
 
 - **Held-out sizes:** LA = 133 tablets (oracle on n=87 box-bearing signs, 95% CI
   ≈ [70, 89]); LB = 320 tablets (DĀMOS).

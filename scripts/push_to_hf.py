@@ -61,9 +61,9 @@ reading.
 | metric | Linear A | Linear B | DeepScribe (cuneiform ref) |
 |---|---|---|---|
 | classifier oracle top-1 | 79.3% | 64.5% | 74% |
-| pipeline E2E sign top-1 | 66.9% | 62.6% | 56.3% |
+| pipeline E2E sign top-1 | 68.7% | 63.8% | 56.3% |
 | pipeline per-line F1 | 64.9% | 76.5% | — |
-| CER (lower better) | ~0.49 | 0.44 | 0.669 |
+| CER (lower better) | ~0.48 | 0.44 | 0.669 |
 
 ## Usage
 ```bash

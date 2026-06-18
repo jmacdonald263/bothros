@@ -1,6 +1,6 @@
 # BOTHROS — Aegean sign reading from photographs
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20746759.svg)](https://doi.org/10.5281/zenodo.20746759)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20746759-blue)](https://doi.org/10.5281/zenodo.20746759)
 [![weights: Hugging Face](https://img.shields.io/badge/weights-Hugging%20Face-yellow)](https://huggingface.co/JMacD263/bothros)
 [![code: MIT](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
@@ -52,17 +52,22 @@ enforced at extraction time, not just at evaluation time). Metrics:
 |---|---|---|---|---|
 | **Classifier oracle top-1** | classifier on gold boxes | **79.3%** | 64.5% | 74% |
 | Classifier oracle top-5 | " | 83.9% | 73.8% | 91% |
-| **Pipeline E2E sign top-1** | full pipeline, per sign | 66.9% | 62.6% | 56.3% |
-| Pipeline E2E sign top-5 | " | 72.4% | 64.8% | 79.3% |
+| **Pipeline E2E sign top-1** | full pipeline, per sign | 68.7% | 63.8% | 56.3% |
+| Pipeline E2E sign top-5 | " | 75.3% | 67.0% | 79.3% |
 | **Pipeline per-line F1** | detect+classify+align, in-line | 64.9% | 76.5% | — |
-| **CER** (lower is better) | character error rate (flat) | ~0.49 | **0.44** | 0.669 |
-| Detection mAP@50 | detector only | ~0.47 | ~0.47 | 0.78 |
+| **CER** (lower is better) | character error rate (flat) | ~0.48 | **0.44** | 0.669 |
+| Detection mAP@50 | detector only | n/m | ~0.47 | 0.78 |
+
+*All pipeline numbers use the single shipped `aegean-unified` detector (E2E at
+high recall; per-line F1 + CER at the precise operating points, conf-filter 0.25
+LA / 0.30 LB). Detection mAP separately measured for Linear B only (n/m = not
+measured for Linear A; both scripts are detector-recall-bound).*
 
 **Honest reading of this table:**
 
 - **Where we lead:** Linear A classifier oracle top-1 (79.3% vs 74%); both
-  scripts on **CER** (0.44 / 0.49 vs 0.669) and on **end-to-end sign top-1**
-  (66.9% / 62.6% vs 56.3%).
+  scripts on **CER** (0.44 / 0.48 vs 0.669) and on **end-to-end sign top-1**
+  (68.7% / 63.8% vs 56.3%).
 - **Where we trail:** oracle top-5 (both below 91%), end-to-end top-5, and
   **detection mAP** — the detector is the bottleneck. A sign the detector never
   finds cannot be classified, which caps end-to-end recall around 60–69%. The
@@ -143,6 +148,7 @@ standard flat character error rate, not a more lenient per-line variant).
 ## Acknowledgements
 
 Built on DĀMOS (Linear B), SigLA and GORILA (Linear A), the lineara.xyz /
-LinearBExplorer corpora, HRCenterNet, Ultralytics YOLO, and timm. Detector
+LinearBExplorer corpora, LiBER (Linear B photographs), Ultralytics YOLO, and
+timm. Detector
 architecture is extensible — the unified Aegean base can be fine-tuned onto
 Cretan Hieroglyphic, Cypro-Minoan, or other scripts.
