@@ -17,6 +17,7 @@ To try the pipeline on a real tablet:
 Outputs `<name>_signs.json` (codes, readings, boxes, confidences) and
 `<name>_overlay.png` (annotated image).
 
-> Tip: facsimile line-drawings work best (the models were trained largely on
-> facsimiles); high-contrast photographs also work but may lose low-contrast
-> signs.
+> Tip: the models were trained on **both** facsimile line-drawings and tablet
+> photographs, so both work. Clear, high-resolution images do best; very
+> low-resolution or heavily-damaged tablets are the hard cases (the detector
+> under- or over-fires on them).

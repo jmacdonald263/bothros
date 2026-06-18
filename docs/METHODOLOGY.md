@@ -97,8 +97,10 @@ and `BENCHMARKS.md`.
   95% CI ≈ [70, 89]) — reported with its interval.
 - Linear B vocabulary is 142 classes vs the ~180 full inventory (clean-data
   limited); rare signs and some logograms are under-represented.
-- Models are trained largely on facsimiles; very different imaging conditions
-  may be out of distribution.
+- Models are trained on a **mix of facsimiles and photographs** (roughly half
+  the detector data and a majority of the classifier crops are photographic), so
+  both are in-distribution. The hard cases are very low-resolution or
+  heavily-damaged tablets and the long sign tail — not "photos" per se.
 
 ## Reproducing / extending
 

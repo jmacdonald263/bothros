@@ -100,7 +100,7 @@ Zenodo with a DOI):
 
 | component | model | notes |
 |---|---|---|
-| detector (both scripts) | `aegean-unified` (YOLO11s) | trained on SigLA + DĀMOS human/GT boxes, test-split excluded |
+| detector (both scripts) | `aegean-unified` (YOLO11s) | trained on SigLA + lineara.xyz + DĀMOS boxes — facsimiles **and** photographs (~half photo); test-split excluded |
 | Linear A classifier | `la-classifier` (ConvNeXt-Tiny) | AB-codes, label-smoothing + mixup calibrated |
 | Linear B classifier | `lb-classifier` (ConvNeXt-Tiny) | B-codes → readings, calibrated |
 

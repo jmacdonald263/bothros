@@ -11,10 +11,12 @@ supplies the crops).
   merged to a single canonical code; `*NNN` and ligature variants normalised).
 
 ## Training data
-~48,984 sign crops from SigLA + lineara.xyz facsimiles, **excluding every
-held-out tablet** (canonical manifest applied at crop-extraction time, not just
-at evaluation). Trained from ImageNet init with **label smoothing 0.1 + mixup
-0.2** (calibration), validation accuracy 0.593.
+~48,984 sign crops from SigLA, lineara.xyz and GORILA — a **mix of facsimile
+line-drawings and tablet photographs, the majority (~75%) photographic**
+(lineara.xyz "Inscription" photos + photo hard-crops + imagemap, plus SigLA/
+facsimile drawings). **Excluding every held-out tablet** (canonical manifest
+applied at crop-extraction time, not just at evaluation). Trained from ImageNet
+init with **label smoothing 0.1 + mixup 0.2** (calibration), val accuracy 0.593.
 
 ## Performance (held-out, leak-free)
 - **Oracle top-1: 79.3%** (classifier on gold boxes) — beats the DeepScribe
@@ -37,7 +39,8 @@ and corpus work. Not for commercial use (CC BY-NC-SA 4.0).
 ## Limitations
 - Long-tailed sign inventory: rare signs have few training examples and lower
   accuracy.
-- Trained predominantly on facsimiles; photographic crops in very different
-  conditions may be out of distribution.
+- Trained on **both facsimiles and photographs**, so both are in-distribution.
+  The hard cases are very low-resolution or heavily-damaged tablets, and
+  detection recall (not classification) is the main end-to-end limiter.
 - The oracle figure isolates the classifier; end-to-end accuracy is lower
   because the detector misses some signs (see the detector card).
