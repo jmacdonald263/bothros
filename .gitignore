@@ -1,0 +1,18 @@
+# Model weights (downloaded from Hugging Face, CC BY-NC-SA — not in git)
+weights/*.pt
+weights/*.pth
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Inference outputs
+*_signs.json
+*_overlay.png
+
+# OS
+.DS_Store

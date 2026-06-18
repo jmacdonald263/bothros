@@ -1,0 +1,27 @@
+Model weights licence — Creative Commons Attribution-NonCommercial-ShareAlike
+4.0 International (CC BY-NC-SA 4.0)
+
+The trained model weights distributed with BOTHROS (the unified Aegean detector
+and the Linear A / Linear B classifiers, hosted on Hugging Face Hub and archived
+on Zenodo) are licensed under CC BY-NC-SA 4.0.
+
+You are free to:
+  - Share — copy and redistribute the weights in any medium or format
+  - Adapt — remix, transform, and build upon the weights (e.g. fine-tune onto
+    other scripts)
+
+Under these terms:
+  - Attribution — credit BOTHROS and the underlying corpora (see below).
+  - NonCommercial — not for commercial use.
+  - ShareAlike — distribute derivatives under the same licence.
+
+Full legal text: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+WHY NON-COMMERCIAL: the weights are derived from training data sourced from
+corpora with research-only / non-commercial terms — GORILA (Godart & Olivier),
+DĀMOS, SigLA, and the lineara.xyz / LinearBExplorer corpora. The weights inherit
+those restrictions. The SOURCE CODE is separately MIT-licensed (see LICENSE).
+
+If you use these weights in academic work, please cite BOTHROS and the source
+corpora.

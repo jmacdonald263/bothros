@@ -1,0 +1,16 @@
+{
+  "title": "BOTHROS: Aegean sign reading from photographs (Linear A + Linear B)",
+  "description": "<p>A two-stage computer-vision pipeline that reads signs on photographs and facsimiles of Linear A and Linear B tablets: a single unified Aegean sign detector (YOLO11) localises signs for both scripts, and a per-script ConvNeXt-Tiny classifier identifies each by catalogue code (AB-codes for Linear A, B-codes for Linear B) and phonetic reading where known.</p><p>This archive is the inference source code (MIT). Trained model weights are hosted separately on the Hugging Face Hub under CC BY-NC-SA 4.0 (https://huggingface.co/JMacD263/bothros), as they are derived from research-only corpora (GORILA, DĀMOS, SigLA).</p><p>All reported results are leak-free and on held-out test tablets (tablet-ID-level split enforced at crop-extraction and detector-training time). The system is benchmarked against the DĀMOS (Linear B) and SigLA (Linear A) corpora and compared to the DeepScribe cuneiform reference.</p>",
+  "upload_type": "software",
+  "license": "MIT",
+  "version": "0.1.0",
+  "creators": [
+    { "name": "MacDonald, Jamie" }
+  ],
+  "keywords": [
+    "Linear A", "Linear B", "Aegean scripts", "epigraphy",
+    "computer vision", "object detection", "sign classification",
+    "DĀMOS", "SigLA", "digital humanities"
+  ],
+  "access_right": "open"
+}
