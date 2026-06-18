@@ -7,8 +7,11 @@ BOTHROS pipeline (the unified detector supplies the crops).
 
 - **Architecture:** ConvNeXt-Tiny (`timm convnext_tiny.in12k_ft_in1k`), 224px.
 - **Weights:** `lb_labeller_v3_calibrated.pth` (~107 MB).
-- **Classes:** 142 B-codes; outputs mapped to readings (e.g. `da`, `ro`, `pa`)
-  via the bundled class→reading map. Temperature-calibrated (T≈0.856).
+- **Classes:** 142 — mostly B-code syllabograms, plus logograms (e.g. `GRA`,
+  `OLE`, `B100`/man), ~33 ligatures, and numerals. 6 allograph pairs share a
+  phonetic reading (→ 136 distinct readings). Outputs mapped to readings (e.g.
+  `da`, `ro`, `pa`) via the bundled class→reading map. Temperature-calibrated
+  (T≈0.856).
 
 ## Training data
 ~8,500 sign crops from the linearb.xyz imagemap + DĀMOS-validated tablets,
@@ -32,8 +35,10 @@ Identifying detected Linear B signs for research, transliteration assistance,
 DĀMOS-style corpus work. Not for commercial use (CC BY-NC-SA 4.0).
 
 ## Limitations
-- Vocabulary is 142 classes vs the ~180 full Linear B inventory — rare signs and
-  some logograms/numerals are under-represented (clean-data-limited).
+- Vocabulary is 142 classes — the common syllabograms + frequent logograms +
+  numerals — vs the larger full Linear B repertoire (~87 syllabograms plus ~100
+  logograms/ideograms). Rare logograms are under-represented (clean-data-limited;
+  34% of classes have <10 training examples, though better-sampled than LA).
 - Oracle top-1 (64.5%) is below the DeepScribe reference (74%); this is a
   clean-training-data ceiling, not a calibration problem (calibration is good).
 - Trained on the available photo/facsimile corpora; unusual imaging may be OOD.
