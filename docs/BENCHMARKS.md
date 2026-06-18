@@ -28,7 +28,7 @@ how earlier leaked numbers were found and corrected.
 
 ## Comparison framing
 
-DeepScribe (Williams et al., JOCCH 2025) is Elamite cuneiform — a different
+DeepScribe ([Williams et al., JOCCH 2025](https://arxiv.org/abs/2306.01268)) is Elamite cuneiform — a different
 script and corpus. The comparison is a cross-domain reference, not a
 head-to-head; CER uses the same standard (flat) definition on both sides. The
 honest summary: **competitive with DeepScribe**, leading on classifier oracle

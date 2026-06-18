@@ -35,10 +35,14 @@ BOTHROS provides one. The headline claim to a researcher is concrete and
 checkable: *"evaluated on held-out DĀMOS / SigLA tablets, leak-free, achieving
 X — and here is the reproduction command."*
 
-The closest comparable published system is **DeepScribe** (Williams et al.,
-JOCCH 2025) for Elamite cuneiform. It is a different script and corpus, so the
-comparison is a cross-domain reference point, not a head-to-head — but it is the
-only quantitative yardstick that exists for this class of tool.
+The closest comparable published system is **DeepScribe** — Williams et al.,
+*"DeepScribe: Localization and Classification of Elamite Cuneiform Signs Via Deep
+Learning"*, JOCCH 2025 ([arXiv:2306.01268](https://arxiv.org/abs/2306.01268) ·
+[code](https://github.com/edwardclem/deepscribe) ·
+[project](https://voices.uchicago.edu/ochre/project/deepscribe/)). It is a
+different script and corpus, so the comparison is a cross-domain reference point,
+not a head-to-head — but it is the only quantitative yardstick that exists for
+this class of tool. (DeepScribe reference figures below are from that paper.)
 
 ---
 

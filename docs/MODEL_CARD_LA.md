@@ -7,8 +7,13 @@ supplies the crops).
 
 - **Architecture:** ConvNeXt-Tiny (`timm convnext_tiny.in12k_ft_in1k`), 224px.
 - **Weights:** `la_clean_v1_best.pth` (~107 MB).
-- **Classes:** ~374 canonical AB-codes (the 53 AB-code/reading "twin" names are
-  merged to a single canonical code; `*NNN` and ligature variants normalised).
+- **Classes:** 374, spanning the **full SigLA-scale Linear A inventory** (~370
+  signs) — not just the ~90-sign syllabary. Composition: ~88 AB-code
+  syllabograms + logograms (`*NNN`-series, written without the asterisk, e.g.
+  `120`, `131B`) + fractions + numerals + 59 ligatures. Names canonicalised
+  (reading/AB-code "twin" names merged, `*` stripped, `+`→`_`). **Long-tailed:**
+  ~120 signs are well-sampled; most are rare (median ~7 training crops/class)
+  with lower accuracy. The headline oracle reflects the common signs.
 
 ## Training data
 ~48,984 sign crops from SigLA, lineara.xyz and GORILA — a **mix of facsimile
