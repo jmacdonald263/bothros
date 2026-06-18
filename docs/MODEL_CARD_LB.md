@@ -24,7 +24,7 @@ extraction time. Label smoothing 0.1 + mixup 0.2.
 - **On detected signs the classifier is ~86–90% top-1/top-5** — the pipeline
   ceiling is detection, not classification.
 - In the full pipeline (unified detector @ conf-filter 0.30): per-line F1
-  **76.5%**, end-to-end sign top-1 ~63%, **CER 0.44** (beats the DeepScribe
+  **76.5%**, end-to-end sign top-1 **63.8%**, **CER 0.44** (beats the DeepScribe
   cuneiform reference, 0.669).
 
 ## Intended use
