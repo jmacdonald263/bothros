@@ -8,7 +8,7 @@
 catalogue code and (where known) phonetic value.** Linear A and Linear B.
 
 > **The name** — a *bóthros* (βόθρος) is the sacrificial pit Odysseus digs in
-> [*Odyssey* 11](https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0218:book=11), pouring libations into it so the spirits of the dead rise to
+> [*Odyssey* 11](https://en.wikipedia.org/wiki/Nekyia), pouring libations into it so the spirits of the dead rise to
 > speak with him. A fitting name for a tool that reads scripts no one has
 > spoken aloud in three thousand years.
 

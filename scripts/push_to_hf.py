@@ -53,7 +53,7 @@ photograph an ancient Aegean tablet, get the signs on it by catalogue code and
 reading.
 
 > **The name** — a *bóthros* (βόθρος) is the pit Odysseus digs in
-> [*Odyssey* 11](https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0218:book=11),
+> [*Odyssey* 11](https://en.wikipedia.org/wiki/Nekyia),
 > pouring libations so the spirits of the dead rise to speak with him. Apt for a
 > tool that reads scripts silent for three thousand years.
 
