@@ -16,7 +16,7 @@ from huggingface_hub import (
 )
 
 NAMESPACE = "JMacD263"
-MODEL_REPO = "JMacD263/bothros"
+MODEL_REPO = "JMacD263/linear-a-linear-b-bothros"
 TITLE = "BOTHROS — Linear A & Linear B sign reading"
 DESC = (  # HF caps collection description at 150 chars
     "Read Aegean tablets from a photo: Linear A & Linear B signs by code + "

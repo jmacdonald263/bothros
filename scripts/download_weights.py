@@ -9,7 +9,7 @@ from pathlib import Path
 
 from huggingface_hub import hf_hub_download
 
-HF_REPO = "JMacD263/bothros"   # weights repo on Hugging Face Hub
+HF_REPO = "JMacD263/linear-a-linear-b-bothros"   # weights repo on Hugging Face Hub
 WEIGHTS_DIR = Path(__file__).resolve().parent.parent / "weights"
 
 FILES = {

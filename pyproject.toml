@@ -22,7 +22,7 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/jmacdonald263/bothros"
-Weights = "https://huggingface.co/JMacD263/bothros"
+Weights = "https://huggingface.co/JMacD263/linear-a-linear-b-bothros"
 
 [project.scripts]
 bothros = "bothros.__main__:main"

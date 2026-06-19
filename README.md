@@ -1,7 +1,7 @@
 # BOTHROS — Aegean sign reading from photographs
 
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20746759-blue)](https://doi.org/10.5281/zenodo.20746759)
-[![weights: Hugging Face](https://img.shields.io/badge/weights-Hugging%20Face-yellow)](https://huggingface.co/JMacD263/bothros)
+[![weights: Hugging Face](https://img.shields.io/badge/weights-Hugging%20Face-yellow)](https://huggingface.co/JMacD263/linear-a-linear-b-bothros)
 [![code: MIT](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
 **Photograph an ancient Aegean tablet → get the signs on it, identified by

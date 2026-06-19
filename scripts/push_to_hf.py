@@ -1,4 +1,4 @@
-"""Publish BOTHROS weights to the Hugging Face Hub (JMacD263/bothros).
+"""Publish BOTHROS weights to the Hugging Face Hub (JMacD263/linear-a-linear-b-bothros).
 
 No CLI needed. Get a WRITE token at https://huggingface.co/settings/tokens, then:
 
@@ -15,7 +15,7 @@ from pathlib import Path
 
 from huggingface_hub import HfApi
 
-HF_REPO = "JMacD263/bothros"
+HF_REPO = "JMacD263/linear-a-linear-b-bothros"
 WEIGHTS = Path(__file__).resolve().parent.parent / "weights"
 FILES = [
     "yolo_aegean_unified.pt",

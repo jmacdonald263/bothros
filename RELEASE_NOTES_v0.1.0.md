@@ -27,7 +27,7 @@ the bottleneck; the LA oracle is a thin-n result reported with its interval).
 ## Install
 ```bash
 pip install -e .
-python3 scripts/download_weights.py   # weights from huggingface.co/JMacD263/bothros (public, no token)
+python3 scripts/download_weights.py   # weights from huggingface.co/JMacD263/linear-a-linear-b-bothros (public, no token)
 python3 -m bothros read your_tablet.jpg --script la
 ```
 
