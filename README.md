@@ -7,8 +7,8 @@
 **Photograph an ancient Aegean tablet → get the signs on it, identified by
 catalogue code and (where known) phonetic value.** Linear A and Linear B.
 
-> **The name** — a *bóthros* (βόθρος) is the sacrificial pit Odysseus digs in
-> [*Odyssey* 11](https://en.wikipedia.org/wiki/Nekyia), pouring libations into it so the spirits of the dead rise to
+> **The name** — a [*bóthros*](https://en.wikipedia.org/wiki/Bothros) (βόθρος) is the sacrificial pit Odysseus digs in
+> the *Odyssey*, pouring libations into it so the spirits of the dead rise to
 > speak with him. A fitting name for a tool that reads scripts no one has
 > spoken aloud in three thousand years.
 
