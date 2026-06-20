@@ -52,6 +52,8 @@ Weights for the [BOTHROS](https://github.com/jmacdonald263/bothros) pipeline:
 photograph an ancient Aegean tablet, get the signs on it by catalogue code and
 reading.
 
+**🤗 Try the [live demo](https://huggingface.co/spaces/JMacD263/bothros-demo)** — no install, upload a photo.
+
 > **The name** — a [*bóthros*](https://en.wikipedia.org/wiki/Bothros) (βόθρος) is the pit Odysseus digs in
 > the *Odyssey*, pouring libations so the spirits of the dead rise to speak with him. Apt for a
 > tool that reads scripts silent for three thousand years.

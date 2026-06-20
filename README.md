@@ -2,6 +2,7 @@
 
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20746759-blue)](https://doi.org/10.5281/zenodo.20746759)
 [![weights: Hugging Face](https://img.shields.io/badge/weights-Hugging%20Face-yellow)](https://huggingface.co/JMacD263/linear-a-linear-b-bothros)
+[![demo: Hugging Face Spaces](https://img.shields.io/badge/demo-%F0%9F%A4%97%20Spaces-orange)](https://huggingface.co/spaces/JMacD263/bothros-demo)
 [![code: MIT](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
 **Photograph an ancient Aegean tablet → get the signs on it, identified by
@@ -92,6 +93,8 @@ commands are in [`docs/BENCHMARKS.md`](docs/BENCHMARKS.md).
 ---
 
 ## Quickstart
+
+**No install — try the [🤗 live demo](https://huggingface.co/spaces/JMacD263/bothros-demo):** upload a tablet photo, get the signs. Or run locally:
 
 ```bash
 pip install -e .
