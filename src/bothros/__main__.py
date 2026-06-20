@@ -16,6 +16,11 @@ DEFAULTS = {
     # B-code -> reading map is bundled in-package (small, public lookup)
     "lb_map": Path(__file__).resolve().parent / "lb_class_to_reading.json",
 }
+RELEASE = {  # full-data "release" variants — max-capability, NOT benchmarkable
+    "detector": WEIGHTS / "yolo_aegean_release.pt",
+    "la": WEIGHTS / "la_classifier_release.pth",
+    "lb": WEIGHTS / "lb_classifier_release.pth",
+}
 
 
 def main(argv=None):
@@ -31,10 +36,14 @@ def main(argv=None):
     r.add_argument("--conf-filter", type=float, default=None,
                    help="override per-script default (la 0.25 / lb 0.30)")
     r.add_argument("--out-dir", type=Path, default=Path("."))
+    r.add_argument("--release", action="store_true",
+                   help="use the full-data 'release' weights (max-capability, NOT "
+                        "benchmarkable; fetch via download_weights.py --release)")
     args = ap.parse_args(argv)
 
-    detector = args.detector or DEFAULTS["detector"]
-    classifier = args.classifier or DEFAULTS[args.script]
+    base = RELEASE if args.release else DEFAULTS
+    detector = args.detector or base["detector"]
+    classifier = args.classifier or base[args.script]
     class_map = args.class_map or (DEFAULTS["lb_map"] if args.script == "lb" else None)
     for p in (detector, classifier):
         if not Path(p).exists():

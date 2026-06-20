@@ -22,6 +22,10 @@ FILES = [
     "la_classifier.pth",
     "lb_classifier.pth",
     "lb_class_to_reading.json",
+    # full-data 'release' variants (max-capability, NOT benchmarkable)
+    "yolo_aegean_release.pt",
+    "la_classifier_release.pth",
+    "lb_classifier_release.pth",
 ]
 
 MODEL_CARD = """---
@@ -76,6 +80,15 @@ reading.
 
 *Cross-script: a Linear-B-only detector reads Linear A at **60.7% F1 zero-shot** — the
 basis for shipping one unified `aegean-unified` detector for both scripts.*
+
+## Benchmark vs release weights
+
+Two sets ship here. **Benchmark** (`yolo_aegean_unified.pt`, `la_classifier.pth`,
+`lb_classifier.pth`) — strict held-out split; the numbers above are theirs; use these
+to reproduce/compare. **Release** (`*_release`) — retrained on the **full data incl.
+the held-out split**: max capability + broader coverage (LB 148 vs 142 classes), but
+**NOT benchmarkable** (they have seen the test tablets — cite the benchmark numbers,
+not these). Fetch with `download_weights.py --release`; run with `bothros read … --release`.
 
 ## Usage
 ```bash
