@@ -1,23 +1,51 @@
 # Example tablets
 
-The Linear A / Linear B facsimiles and photographs used to develop BOTHROS come
-from corpora with research-only / non-commercial terms (GORILA, DĀMOS, SigLA,
-lineara.xyz, LinearBExplorer) and **cannot be redistributed here**.
+Three ways to try BOTHROS on a real tablet.
 
-To try the pipeline on a real tablet:
+## 1. The live demo (no install)
 
-1. Obtain a tablet image from one of the open corpora, e.g.:
-   - Linear A: https://sigla.phis.me/ or https://lineara.xyz
-   - Linear B: https://damos.hf.uio.no/ or [LinearBExplorer](https://github.com/mwenge/LinearBExplorer)
-2. Run:
-   ```bash
-   python3 -m bothros read path/to/your_tablet.jpg --script la   # or --script lb
-   ```
+Upload any tablet photo at the **[🤗 bothros-demo](https://huggingface.co/spaces/JMacD263/bothros-demo)**.
 
-Outputs `<name>_signs.json` (codes, readings, boxes, confidences) and
-`<name>_overlay.png` (annotated image).
+## 2. Run on a clearly-licensed example image
 
-> Tip: the models were trained on **both** facsimile line-drawings and tablet
-> photographs, so both work. Clear, high-resolution images do best; very
-> low-resolution or heavily-damaged tablets are the hard cases (the detector
-> under- or over-fires on them).
+These are openly licensed tablet **photographs** on Wikimedia Commons — download one
+and run the pipeline (URLs verified resolving + licensed as listed, 2026-06-20):
+
+```bash
+# Linear B — Pylos tablet Tn 316 (National Archaeological Museum, Athens)
+curl -L -o pylos_Tn316.jpg \
+  "https://upload.wikimedia.org/wikipedia/commons/2/25/Linear_B_tablet%2C_Pylos%2C_13th_century_BC%2C_NAMA_Tn_316%2C_191137.jpg"
+python3 -m bothros read pylos_Tn316.jpg --script lb
+
+# Linear A — tablet from Zakros (Archaeological Museum of Sitia)
+curl -L -o zakros_LA.jpg \
+  "https://upload.wikimedia.org/wikipedia/commons/6/6b/Linear_A_tablet_from_Zakros%2C_AM_Sitia%2C_258622.jpg"
+python3 -m bothros read zakros_LA.jpg --script la
+```
+
+| image | script | licence | credit |
+|---|---|---|---|
+| [Pylos Tn 316](https://commons.wikimedia.org/wiki/File:Linear_B_tablet,_Pylos,_13th_century_BC,_NAMA_Tn_316,_191137.jpg) | Linear B | CC BY-SA 4.0 | © Zde, via Wikimedia Commons |
+| [Zakros tablet](https://commons.wikimedia.org/wiki/File:Linear_A_tablet_from_Zakros,_AM_Sitia,_258622.jpg) | Linear A | CC BY-SA 4.0 | © Zde, via Wikimedia Commons |
+| [Knossos KN 1815](https://commons.wikimedia.org/wiki/File:Knossos_KN_1815.jpg) | Linear B | CC0 (public domain) | ShlomoKatzav — no attribution needed (lower-res) |
+
+CC BY-SA 4.0 requires attribution + share-alike if you *redistribute* the image; CC0
+has no conditions. These are museum photographs (not facsimile line-drawings) — the
+pipeline was trained on both and handles either.
+
+> These are out-of-domain photos (museum display shots, oblique lighting, glass
+> glare), so expect the honest end-to-end behaviour from the README, not the oracle
+> numbers. A real test, not a cherry-pick.
+
+## 3. The full development corpora
+
+The Linear A / Linear B facsimiles and photographs used to *develop* BOTHROS come
+from corpora with research-only / non-commercial terms and **cannot be redistributed
+here**. To work with them directly:
+
+- Linear A: [SigLA](https://sigla.phis.me/) (Salgarella & Castellan) or [lineara.xyz](https://lineara.xyz)
+- Linear B: [DĀMOS](https://damos.hf.uio.no/) or [LinearBExplorer](https://github.com/mwenge/LinearBExplorer); photographs via [LiBER](https://liber.cnr.it)
+
+Output for any run: `<name>_signs.json` (codes, readings, boxes, confidences) and
+`<name>_overlay.png` (annotated image). Clear, high-resolution images do best;
+very low-resolution or heavily-damaged tablets are the hard cases.

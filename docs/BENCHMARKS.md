@@ -53,5 +53,9 @@ python3 -m bothros read <held_out_tablet>.jpg --script lb --conf-filter 0.30
 ```
 
 Per-sign oracle / E2E top-k and CER are computed against the corpus
-transliterations; the full evaluation harness (with ground-truth alignment) is
-part of the development repository, not this inference package.
+transliterations. The **Linear A classifier-oracle (79.3%) is reproducible from this
+repo** — see [`../eval/`](../eval/), which ships the held-out GT + harness (you supply
+the tablet images). LB's oracle was measured on tight human-traced
+crops from the linearb.xyz imagemap (LinearBExplorer) — reproducible from that source
+(the boxes are coupled to its image space; see `../eval/`). The full pipeline-eval harness (ground-truth
+alignment, per-line F1, CER) lives in the development repository.

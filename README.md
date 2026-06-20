@@ -98,13 +98,17 @@ commands are in [`docs/BENCHMARKS.md`](docs/BENCHMARKS.md).
 
 ```bash
 pip install -e .
-python3 scripts/download_weights.py          # fetches weights from Hugging Face
+python3 scripts/download_weights.py          # ~232 MB of weights from the public HF repo — no token needed
 python3 -m bothros read your_tablet.jpg --script la   # Linear A
 python3 -m bothros read your_tablet.jpg --script lb   # Linear B
 ```
 
+**Tested with** Python 3.12.9 · torch 2.11 · timm 1.0.26 · ultralytics 8.4.30 — exact
+pins in [`requirements-lock.txt`](requirements-lock.txt) (`pyproject.toml` carries only
+floors; install the lock to reproduce the benchmark numbers).
+
 Tablet images are not bundled (the source corpora are research-only — see
-[`examples/`](examples/) for where to get one).
+[`examples/`](examples/) for a runnable, openly-licensed example).
 
 Output: detected signs with bounding boxes, catalogue codes, phonetic readings,
 and per-sign confidence — as JSON and an annotated overlay image.
@@ -123,7 +127,23 @@ Zenodo with a DOI):
 | Linear B classifier | `lb-classifier` (ConvNeXt-Tiny) | B-codes → readings, calibrated |
 
 See the model cards in [`docs/`](docs/) for training data, intended use, and
-limitations.
+limitations, and [`docs/DECISIONS.md`](docs/DECISIONS.md) for *why* YOLO11 + ConvNeXt-Tiny
+(with honest limits).
+
+---
+
+## Cross-script transfer — the unified detector, validated from first principles
+
+Shipping a *single* detector for both scripts isn't just convenience — it's
+empirically justified. A detector trained on **Linear B alone**, having never seen
+a Linear A tablet, reads Linear A **zero-shot at 60.7% per-line F1 / 66.2%
+end-to-end sign top-1** — close to the 64.7% of the dedicated LA-trained detector.
+Sign *detection* transfers across the two scripts because Linear A and Linear B
+signs are visually cognate; only the *classifier* needs to be script-specific. This
+is the basis for the one `aegean-unified` detector, and suggests the same base will
+extend to related scripts (Cretan Hieroglyphic, Cypro-Minoan) with little or no
+script-specific detection data. Full numbers: [`docs/BENCHMARKS.md`](docs/BENCHMARKS.md)
+(2026-06-17, cross-script detector transfer).
 
 ---
 
@@ -136,6 +156,12 @@ tablets. Every number above is from a pipeline rebuilt with a canonical
 held-out tablet-ID manifest excluded at **extraction** time. Where a metric is
 compared to DeepScribe, the same metric definition is used (e.g. CER is the
 standard flat character error rate, not a more lenient per-line variant).
+
+**Reproduce it yourself:** the Linear A classifier-oracle (79.3%) runs from this repo
+on public artifacts — see [`eval/`](eval/) (the held-out GT + harness ship here; you
+supply the tablet images). LB's oracle used tight human-traced crops from the
+[linearb.xyz imagemap](https://github.com/mwenge/LinearBExplorer); `eval/README.md`
+explains how to reproduce it from that source.
 
 ---
 
@@ -160,10 +186,16 @@ standard flat character error rate, not a more lenient per-line variant).
 
 ## Acknowledgements
 
-Built on [DĀMOS](https://damos.hf.uio.no) (Linear B), [SigLA](https://sigla.phis.me)
-and GORILA (Linear A), the [lineara.xyz](https://lineara.xyz) /
-[LinearBExplorer](https://github.com/mwenge/LinearBExplorer) corpora,
-[LiBER](https://liber.cnr.it) (Linear B photographs), Ultralytics YOLO, and timm.
-Detector
-architecture is extensible — the unified Aegean base can be fine-tuned onto
-Cretan Hieroglyphic, Cypro-Minoan, or other scripts.
+Built on several open corpora, each credited for what it actually provides:
+
+- **Linear A** — inscription **images** from [**lineara.xyz**](https://lineara.xyz)
+  (mwenge; ultimately from GORILA, Godart & Olivier); hand-traced **sign boxes** and the
+  **AB-code sign catalogue** from [**SigLA**](https://sigla.phis.me) (**Ester Salgarella
+  & Simon Castellan**) and the lineara.xyz imagemap.
+- **Linear B** — transcriptions from [**DĀMOS**](https://damos.hf.uio.no) (Federico
+  Aurora), the hand-traced sign **imagemap (boxes)** from
+  [**LinearBExplorer**](https://github.com/mwenge/LinearBExplorer) (mwenge), and
+  photographs from [**LiBER**](https://liber.cnr.it).
+
+Plus Ultralytics YOLO and timm. The unified Aegean detector architecture is extensible —
+the base can be fine-tuned onto Cretan Hieroglyphic, Cypro-Minoan, or other scripts.

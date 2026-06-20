@@ -74,6 +74,9 @@ reading.
 | pipeline per-line F1 | 64.9% | 76.5% | — |
 | CER (lower better) | ~0.48 | 0.44 | 0.669 |
 
+*Cross-script: a Linear-B-only detector reads Linear A at **60.7% F1 zero-shot** — the
+basis for shipping one unified `aegean-unified` detector for both scripts.*
+
 ## Usage
 ```bash
 pip install bothros            # or: pip install -e . from the GitHub repo
@@ -82,7 +85,9 @@ python3 -m bothros read your_tablet.jpg --script la   # or --script lb
 ```
 
 ## Licence
-**CC BY-NC-SA 4.0** — derived from research-only corpora (GORILA, DĀMOS, SigLA).
+**CC BY-NC-SA 4.0** — derived from research-only corpora: lineara.xyz + GORILA (Linear
+A images), SigLA + lineara.xyz (Linear A sign boxes + AB-code catalogue), DĀMOS +
+LinearBExplorer (Linear B).
 The pipeline source code is MIT (see the GitHub repo). Non-commercial use only.
 
 ## Citation

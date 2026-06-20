@@ -1,0 +1,22 @@
+# BOTHROS — known-good inference/eval versions (Python 3.12.9, verified 2026-06-20).
+#
+# pyproject.toml pins only floors (torch>=2.1, timm>=1.0, ...). These are the EXACT
+# versions the shipped weights were produced/evaluated with on this machine — pin
+# them for guaranteed reproducibility of the benchmark numbers. Not a full venv
+# freeze (transitive deps resolve from these); the listed packages are what the
+# pipeline imports directly.
+#
+#   pip install -r requirements-lock.txt
+#
+# Inference needs: torch, torchvision, timm, ultralytics, pillow, opencv-python,
+# huggingface-hub. numpy is transitive; scipy is used by the evaluation scripts.
+
+torch==2.11.0
+torchvision==0.26.0
+timm==1.0.26
+ultralytics==8.4.30
+numpy==2.4.3
+pillow==12.1.1
+opencv-python==4.13.0.92
+huggingface-hub==1.8.0
+scipy==1.17.1

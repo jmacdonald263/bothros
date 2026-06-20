@@ -1,0 +1,993 @@
+{
+ "_license": "CC BY-NC-SA 4.0",
+ "_attribution": "Linear A sign labels derived from SigLA (Ester Salgarella & Simon Castellan, sigla.phis.me) under CC BY-NC-SA 4.0.",
+ "_source": "SigLA / GORILA",
+ "_note": "Tablet IMAGES are NOT included (research-only corpora). Obtain them and run with --images-root; the 'inscription' field gives each tablet ID. Bounding boxes are original to BOTHROS.",
+ "data/raw/linear_a/photographs/ARZf2-Inscription.jpg": {
+  "inscription": "ARZf2",
+  "gt_signs": [
+   "AB28",
+   "AB01",
+   "AB80",
+   "AB04"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 108,
+    "y": 168,
+    "width": 66,
+    "height": 117
+   },
+   {
+    "x": 170,
+    "y": 167,
+    "width": 36,
+    "height": 96
+   },
+   {
+    "x": 202,
+    "y": 157,
+    "width": 60,
+    "height": 94
+   },
+   {
+    "x": 248,
+    "y": 140,
+    "width": 65,
+    "height": 101
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HSZg1-Inscription.jpg": {
+  "inscription": "HSZg1",
+  "gt_signs": [
+   "AB08",
+   "AB80"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 60,
+    "y": 157,
+    "width": 51,
+    "height": 73
+   },
+   {
+    "x": 106,
+    "y": 120,
+    "width": 52,
+    "height": 89
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1003-Inscription.jpg": {
+  "inscription": "HTWa1003",
+  "gt_signs": [
+   "AB01",
+   "AB77"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 37,
+    "y": 24,
+    "width": 60,
+    "height": 86
+   },
+   {
+    "x": 90,
+    "y": 27,
+    "width": 72,
+    "height": 86
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1005-Inscription.jpg": {
+  "inscription": "HTWa1005",
+  "gt_signs": [
+   "AB01",
+   "AB77"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 33,
+    "y": 27,
+    "width": 63,
+    "height": 87
+   },
+   {
+    "x": 103,
+    "y": 32,
+    "width": 59,
+    "height": 84
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1008-Inscription.jpg": {
+  "inscription": "HTWa1008",
+  "gt_signs": [
+   "AB28",
+   "AB60"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 33,
+    "y": 14,
+    "width": 55,
+    "height": 80
+   },
+   {
+    "x": 83,
+    "y": 13,
+    "width": 55,
+    "height": 81
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1011-Inscription.jpg": {
+  "inscription": "HTWa1011",
+  "gt_signs": [
+   "AB28",
+   "AB60"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 15,
+    "y": 15,
+    "width": 51,
+    "height": 101
+   },
+   {
+    "x": 64,
+    "y": 18,
+    "width": 56,
+    "height": 85
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1148-Inscription.jpg": {
+  "inscription": "HTWa1148",
+  "gt_signs": [
+   "AB08"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 106,
+    "y": 105,
+    "width": 345,
+    "height": 284
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1150-Inscription.jpg": {
+  "inscription": "HTWa1150",
+  "gt_signs": [
+   "AB28"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 170,
+    "y": 23,
+    "width": 349,
+    "height": 428
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1176-Inscription.jpg": {
+  "inscription": "HTWa1176",
+  "gt_signs": [
+   "AB41"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 52,
+    "y": 4,
+    "width": 80,
+    "height": 105
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1279-Inscription.jpg": {
+  "inscription": "HTWa1279",
+  "gt_signs": [
+   "AB61"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 45,
+    "y": 28,
+    "width": 79,
+    "height": 121
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1282-Inscription.jpg": {
+  "inscription": "HTWa1282",
+  "gt_signs": [
+   "AB74"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 46,
+    "y": 34,
+    "width": 94,
+    "height": 101
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1294-Inscription.jpg": {
+  "inscription": "HTWa1294",
+  "gt_signs": [
+   "AB74"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 23,
+    "y": 28,
+    "width": 77,
+    "height": 115
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1298-Inscription.jpg": {
+  "inscription": "HTWa1298",
+  "gt_signs": [
+   "AB74"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 49,
+    "y": 4,
+    "width": 0,
+    "height": 0
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1481-Inscription.jpg": {
+  "inscription": "HTWa1481",
+  "gt_signs": [
+   "AB81"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 43,
+    "y": 11,
+    "width": 94,
+    "height": 93
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1508-Inscription.jpg": {
+  "inscription": "HTWa1508",
+  "gt_signs": [
+   "AB81"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 57,
+    "y": 21,
+    "width": 84,
+    "height": 75
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1518-Inscription.jpg": {
+  "inscription": "HTWa1518",
+  "gt_signs": [
+   "AB81"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 43,
+    "y": 22,
+    "width": 94,
+    "height": 79
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1547-Inscription.jpg": {
+  "inscription": "HTWa1547",
+  "gt_signs": [
+   "AB81"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 56,
+    "y": 37,
+    "width": 73,
+    "height": 100
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1550-Inscription.jpg": {
+  "inscription": "HTWa1550",
+  "gt_signs": [
+   "AB81"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 25,
+    "y": 26,
+    "width": 82,
+    "height": 96
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1579-Inscription.jpg": {
+  "inscription": "HTWa1579",
+  "gt_signs": [
+   "AB81"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 26,
+    "y": 34,
+    "width": 66,
+    "height": 86
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1587-Inscription.jpg": {
+  "inscription": "HTWa1587",
+  "gt_signs": [
+   "AB81"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 36,
+    "y": 20,
+    "width": 81,
+    "height": 110
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1624-Inscription.jpg": {
+  "inscription": "HTWa1624",
+  "gt_signs": [
+   "*301"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 20,
+    "y": 31,
+    "width": 79,
+    "height": 96
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1658-Inscription.jpg": {
+  "inscription": "HTWa1658",
+  "gt_signs": [
+   "*301"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 20,
+    "y": 38,
+    "width": 68,
+    "height": 70
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1659-Inscription.jpg": {
+  "inscription": "HTWa1659",
+  "gt_signs": [
+   "*301"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 27,
+    "y": 29,
+    "width": 66,
+    "height": 81
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1747-Inscription.jpg": {
+  "inscription": "HTWa1747",
+  "gt_signs": [
+   "*301"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 37,
+    "y": 18,
+    "width": 86,
+    "height": 73
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1751-Inscription.jpg": {
+  "inscription": "HTWa1751",
+  "gt_signs": [
+   "*301"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 36,
+    "y": 20,
+    "width": 88,
+    "height": 80
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1809-Inscription.jpg": {
+  "inscription": "HTWa1809",
+  "gt_signs": [
+   "*301"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 37,
+    "y": 38,
+    "width": 79,
+    "height": 105
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWa1852-Inscription.jpg": {
+  "inscription": "HTWa1852",
+  "gt_signs": [
+   "*368"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 27,
+    "y": 30,
+    "width": 71,
+    "height": 106
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWc3003-Inscription.jpg": {
+  "inscription": "HTWc3003",
+  "gt_signs": [
+   "AB77",
+   "AB27",
+   "AB02"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 51,
+    "y": 65,
+    "width": 36,
+    "height": 56
+   },
+   {
+    "x": 86,
+    "y": 49,
+    "width": 33,
+    "height": 68
+   },
+   {
+    "x": 113,
+    "y": 50,
+    "width": 39,
+    "height": 68
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWc3011-Inscription.jpg": {
+  "inscription": "HTWc3011",
+  "gt_signs": [
+   "ZU",
+   "AB07",
+   "AB60"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 23,
+    "y": 59,
+    "width": 50,
+    "height": 80
+   },
+   {
+    "x": 70,
+    "y": 45,
+    "width": 53,
+    "height": 71
+   },
+   {
+    "x": 123,
+    "y": 46,
+    "width": 46,
+    "height": 77
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTWc3013-Inscription.jpg": {
+  "inscription": "HTWc3013",
+  "gt_signs": [
+   "*188"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 37,
+    "y": 35,
+    "width": 79,
+    "height": 110
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/HTZb159-Inscription.jpg": {
+  "inscription": "HTZb159",
+  "gt_signs": [
+   "AB08",
+   "AB06",
+   "AB55",
+   "AB41",
+   "AB57",
+   "AB09"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 85,
+    "y": 268,
+    "width": 97,
+    "height": 115
+   },
+   {
+    "x": 173,
+    "y": 241,
+    "width": 65,
+    "height": 107
+   },
+   {
+    "x": 235,
+    "y": 226,
+    "width": 78,
+    "height": 128
+   },
+   {
+    "x": 295,
+    "y": 238,
+    "width": 82,
+    "height": 118
+   },
+   {
+    "x": 367,
+    "y": 220,
+    "width": 77,
+    "height": 132
+   },
+   {
+    "x": 439,
+    "y": 248,
+    "width": 82,
+    "height": 104
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KEZb5-Inscription.jpg": {
+  "inscription": "KEZb5",
+  "gt_signs": [
+   "VIN+RA"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 76,
+    "y": 60,
+    "width": 229,
+    "height": 412
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2016-Inscription.jpg": {
+  "inscription": "KHWc2016",
+  "gt_signs": [
+   "*411"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 70,
+    "y": 40,
+    "width": 163,
+    "height": 162
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2020-Inscription.jpg": {
+  "inscription": "KHWc2020",
+  "gt_signs": [
+   "*409"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 128,
+    "y": 166,
+    "width": 208,
+    "height": 217
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2025-Inscription.jpg": {
+  "inscription": "KHWc2025",
+  "gt_signs": [
+   "*409"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 75,
+    "y": 49,
+    "width": 135,
+    "height": 175
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2029-Inscription.jpg": {
+  "inscription": "KHWc2029",
+  "gt_signs": [
+   "VIR+KA"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 111,
+    "y": 104,
+    "width": 180,
+    "height": 201
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2034-Inscription.jpg": {
+  "inscription": "KHWc2034",
+  "gt_signs": [
+   "AB61"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 84,
+    "y": 16,
+    "width": 129,
+    "height": 165
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2041-Inscription.jpg": {
+  "inscription": "KHWc2041",
+  "gt_signs": [
+   "*164"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 80,
+    "y": 2,
+    "width": 101,
+    "height": 142
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2053-Inscription.jpg": {
+  "inscription": "KHWc2053",
+  "gt_signs": [
+   "*301+*311"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 102,
+    "y": 84,
+    "width": 130,
+    "height": 163
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2056-Inscription.jpg": {
+  "inscription": "KHWc2056",
+  "gt_signs": [
+   "*337+*188"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 105,
+    "y": 72,
+    "width": 126,
+    "height": 196
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2060-Inscription.jpg": {
+  "inscription": "KHWc2060",
+  "gt_signs": [
+   "*86+*188"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 90,
+    "y": 58,
+    "width": 187,
+    "height": 151
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2066-Inscription.jpg": {
+  "inscription": "KHWc2066",
+  "gt_signs": [
+   "*516"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 104,
+    "y": 58,
+    "width": 106,
+    "height": 136
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2099-Inscription.jpg": {
+  "inscription": "KHWc2099",
+  "gt_signs": [
+   "MI+*301"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 113,
+    "y": 42,
+    "width": 142,
+    "height": 173
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2105-Inscription.jpg": {
+  "inscription": "KHWc2105",
+  "gt_signs": [
+   "AB61"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 101,
+    "y": 47,
+    "width": 152,
+    "height": 223
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2110-Inscription.jpg": {
+  "inscription": "KHWc2110",
+  "gt_signs": [
+   "AB61"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 86,
+    "y": 38,
+    "width": 107,
+    "height": 215
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KHWc2118-Inscription.jpg": {
+  "inscription": "KHWc2118",
+  "gt_signs": [
+   "AB61"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 121,
+    "y": 72,
+    "width": 137,
+    "height": 225
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KNWc29-Inscription.jpg": {
+  "inscription": "KNWc29",
+  "gt_signs": [
+   "*21M"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 124,
+    "y": 111,
+    "width": 113,
+    "height": 103
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/KNZe16-Inscription.jpg": {
+  "inscription": "KNZe16",
+  "gt_signs": [
+   "AB08",
+   "AB39"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 97,
+    "y": 311,
+    "width": 238,
+    "height": 404
+   },
+   {
+    "x": 353,
+    "y": 260,
+    "width": 230,
+    "height": 466
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/MILZb2-Inscription.jpg": {
+  "inscription": "MILZb2",
+  "gt_signs": [
+   "AB03",
+   "AB50"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 171,
+    "y": 131,
+    "width": 54,
+    "height": 116
+   },
+   {
+    "x": 222,
+    "y": 127,
+    "width": 62,
+    "height": 108
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/PHWb36-Inscription.jpg": {
+  "inscription": "PHWb36",
+  "gt_signs": [
+   "AB04"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 105,
+    "y": 69,
+    "width": 59,
+    "height": 89
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/PHWc38-Inscription.jpg": {
+  "inscription": "PHWc38",
+  "gt_signs": [
+   "*314",
+   "AB59",
+   "AB80"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 22,
+    "y": 47,
+    "width": 69,
+    "height": 115
+   },
+   {
+    "x": 76,
+    "y": 29,
+    "width": 94,
+    "height": 126
+   },
+   {
+    "x": 162,
+    "y": 33,
+    "width": 74,
+    "height": 112
+   }
+  ]
+ },
+ "data/raw/linear_a/photographs/PSZa2-Inscription.jpg": {
+  "inscription": "PSZa2",
+  "gt_signs": [
+   "AB27",
+   "AB28",
+   "AB44",
+   "AB59",
+   "AB06",
+   "AB28",
+   "*301",
+   "AB37",
+   "𐄌",
+   "AB57",
+   "AB37",
+   "AB57",
+   "AB31",
+   "AB31",
+   "AB60",
+   "AB13"
+  ],
+  "gt_bboxes": [
+   {
+    "x": 45,
+    "y": 177,
+    "width": 40,
+    "height": 24
+   },
+   {
+    "x": 44,
+    "y": 150,
+    "width": 46,
+    "height": 31
+   },
+   {
+    "x": 46,
+    "y": 122,
+    "width": 48,
+    "height": 29
+   },
+   {
+    "x": 270,
+    "y": 444,
+    "width": 28,
+    "height": 19
+   },
+   {
+    "x": 267,
+    "y": 432,
+    "width": 33,
+    "height": 20
+   },
+   {
+    "x": 255,
+    "y": 419,
+    "width": 35,
+    "height": 19
+   },
+   {
+    "x": 256,
+    "y": 396,
+    "width": 34,
+    "height": 24
+   },
+   {
+    "x": 265,
+    "y": 372,
+    "width": 31,
+    "height": 22
+   },
+   {
+    "x": 262,
+    "y": 354,
+    "width": 43,
+    "height": 15
+   },
+   {
+    "x": 247,
+    "y": 238,
+    "width": 37,
+    "height": 19
+   },
+   {
+    "x": 252,
+    "y": 216,
+    "width": 31,
+    "height": 19
+   },
+   {
+    "x": 240,
+    "y": 194,
+    "width": 46,
+    "height": 24
+   },
+   {
+    "x": 241,
+    "y": 183,
+    "width": 34,
+    "height": 19
+   },
+   {
+    "x": 237,
+    "y": 171,
+    "width": 37,
+    "height": 19
+   },
+   {
+    "x": 235,
+    "y": 154,
+    "width": 41,
+    "height": 17
+   },
+   {
+    "x": 231,
+    "y": 117,
+    "width": 41,
+    "height": 36
+   }
+  ]
+ },
+ "_meta": {
+  "purpose": "Leak-free LA held-out ORACLE eval (133-tablet canonical held-out, box-bearing, canonical naming). DeepScribe-comparable oracle top-1/top-5.",
+  "naming": "canonical AB-code (la_canonical_names.json)",
+  "held_out_source": "data/splits/la_heldout_tablets.json",
+  "n_tablets": 52,
+  "n_pairs": 88
+ }
+}
