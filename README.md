@@ -168,15 +168,13 @@ explains how to reproduce it from that source.
 
 ## Research — companion findings
 
-Exploratory findings built on this pipeline live in a separate repo:
+Exploratory analyses built on this pipeline live in a separate repo:
 **[jmacdonald263/bothros-research](https://github.com/jmacdonald263/bothros-research)** —
-*what a vision model recovers from Aegean sign shapes that isn't obvious by eye.* Every
-claim is anchored to published ground truth with a baseline/significance test (or it
-doesn't ship), and negatives are featured — including a **retracted** result kept as a
-worked example. Highlights: Linear A ↔ Linear B sign correspondences recovered by visual
-similarity (secure-tier P@5 = 100%), scribal-hand agreement with Skelton's palaeography,
-and a model-free script-structure comparison. Each finding reports both published weight
-sets (release + held-out benchmark).
+structure in Linear A and Linear B sign data recovered by the model and by corpus
+statistics. Each finding states its ground truth, baseline, and significance test, and
+reports results on both published weight sets. Examples: LA↔LB sign correspondences from
+visual similarity (secure-tier P@5 = 100%), scribal-hand agreement with catalogued
+attributions, and logogram-vs-syllabogram classification from distribution alone.
 
 ---
 
