@@ -3,6 +3,7 @@
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20746759-blue)](https://doi.org/10.5281/zenodo.20746759)
 [![weights: Hugging Face](https://img.shields.io/badge/weights-Hugging%20Face-yellow)](https://huggingface.co/JMacD263/linear-a-linear-b-bothros)
 [![demo: Hugging Face Spaces](https://img.shields.io/badge/demo-%F0%9F%A4%97%20Spaces-orange)](https://huggingface.co/spaces/JMacD263/bothros-demo)
+[![research: findings](https://img.shields.io/badge/research-findings-purple)](https://github.com/jmacdonald263/bothros-research)
 [![code: MIT](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
 **Photograph an ancient Aegean tablet → get the signs on it, identified by
@@ -162,6 +163,20 @@ on public artifacts — see [`eval/`](eval/) (the held-out GT + harness ship her
 supply the tablet images). LB's oracle used tight human-traced crops from the
 [linearb.xyz imagemap](https://github.com/mwenge/LinearBExplorer); `eval/README.md`
 explains how to reproduce it from that source.
+
+---
+
+## Research — companion findings
+
+Exploratory findings built on this pipeline live in a separate repo:
+**[jmacdonald263/bothros-research](https://github.com/jmacdonald263/bothros-research)** —
+*what a vision model recovers from Aegean sign shapes that isn't obvious by eye.* Every
+claim is anchored to published ground truth with a baseline/significance test (or it
+doesn't ship), and negatives are featured — including a **retracted** result kept as a
+worked example. Highlights: Linear A ↔ Linear B sign correspondences recovered by visual
+similarity (secure-tier P@5 = 100%), scribal-hand agreement with Skelton's palaeography,
+and a model-free script-structure comparison. Each finding reports both published weight
+sets (release + held-out benchmark).
 
 ---
 
