@@ -23,5 +23,8 @@ corpora with research-only / non-commercial terms — GORILA (Godart & Olivier),
 DĀMOS, SigLA, and the lineara.xyz / LinearBExplorer corpora. The weights inherit
 those restrictions. The SOURCE CODE is separately MIT-licensed (see LICENSE).
 
+No corpus images are redistributed in this project: only the trained weights
+(and the code that fetches images from the corpora's own sources at run time).
+
 If you use these weights in academic work, please cite BOTHROS and the source
 corpora.

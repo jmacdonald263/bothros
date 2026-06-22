@@ -1,7 +1,7 @@
 """Download BOTHROS model weights from Hugging Face Hub into release/weights/.
 
 Weights are licensed CC BY-NC-SA 4.0 (see WEIGHTS_LICENSE), separate from the
-MIT code. ~233 MB total (one detector + two classifiers). Public repo, no token.
+MIT code. ~244 MB total (one detector + two classifiers). Public repo, no token.
 
     python3 scripts/download_weights.py            # benchmark weights (the published numbers)
     python3 scripts/download_weights.py --release  # full-data 'release' variants (NOT benchmarkable)
@@ -16,8 +16,8 @@ WEIGHTS_DIR = Path(__file__).resolve().parent.parent / "weights"
 
 BENCHMARK = {
     "detector":      "yolo_aegean_unified.pt",     # unified Aegean detector (~19 MB)
-    "la_classifier": "la_classifier.pth",          # Linear A ConvNeXt-Tiny (~107 MB)
-    "lb_classifier": "lb_classifier.pth",          # Linear B ConvNeXt-Tiny (~107 MB)
+    "la_classifier": "la_classifier.pth",          # Linear A ConvNeXt-Tiny (~113 MB)
+    "lb_classifier": "lb_classifier.pth",          # Linear B ConvNeXt-Tiny (~112 MB)
 }
 RELEASE = {  # full-data variants — max-capability, NOT benchmarkable (trained incl. held-out)
     "detector":      "yolo_aegean_release.pt",

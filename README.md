@@ -37,8 +37,8 @@ their phonetic readings where established.
 ## Why this exists
 
 No sign-segmentation-and-classification benchmark against the **DĀMOS** corpus
-(Linear B) or **SigLA** (Linear A) had been published for a tool of this type.
-BOTHROS provides one. The headline claim to a researcher is concrete and
+(Linear B) or **SigLA** (Linear A) had been published, to our knowledge, for a
+tool of this type. BOTHROS provides one. The headline claim to a researcher is concrete and
 checkable: *"evaluated on held-out DĀMOS / SigLA tablets, leak-free, achieving
 X — and here is the reproduction command."*
 
@@ -75,6 +75,12 @@ LA / 0.30 LB). Detection mAP@50 measured vs held-out GT boxes (LA n=51, clean
 GT; LB n=24, GT registration imperfect → conservative figure). Both scripts are
 detector-recall-bound.*
 
+*DeepScribe figures are a cross-domain reference, not a head-to-head: it uses
+hand-annotated ground truth (vs our partly auto-extracted training crops) and 141
+sign classes (vs Linear A 374 / Linear B 142 here), so the per-class metrics are
+not directly comparable — if anything the larger vocabulary makes ours the harder
+task.*
+
 **Honest reading of this table:**
 
 - **Where we lead:** Linear A classifier oracle top-1 (79.3% vs 74%); both
@@ -95,11 +101,11 @@ commands are in [`docs/BENCHMARKS.md`](docs/BENCHMARKS.md).
 
 ## Quickstart
 
-**No install — try the [🤗 live demo](https://huggingface.co/spaces/JMacD263/bothros-demo):** upload a tablet photo, get the signs. Or run locally:
+**No install — try the [🤗 live demo](https://huggingface.co/spaces/JMacD263/bothros-demo):** upload a tablet photo, get the signs. (Free-tier Space — if it shows "sleeping", give it ~30s to wake.) Or run locally:
 
 ```bash
 pip install -e .
-python3 scripts/download_weights.py          # ~232 MB of weights from the public HF repo — no token needed
+python3 scripts/download_weights.py          # ~244 MB of weights from the public HF repo — no token needed
 python3 -m bothros read your_tablet.jpg --script la   # Linear A
 python3 -m bothros read your_tablet.jpg --script lb   # Linear B
 ```
@@ -130,6 +136,27 @@ Zenodo with a DOI):
 See the model cards in [`docs/`](docs/) for training data, intended use, and
 limitations, and [`docs/DECISIONS.md`](docs/DECISIONS.md) for *why* YOLO11 + ConvNeXt-Tiny
 (with honest limits).
+
+---
+
+## Scope — what v0.1.0 covers
+
+This release reads **Linear A and Linear B**. Two related scripts are deliberately
+*not* in it, and it's worth being explicit about why:
+
+- **Cretan Hieroglyphic** reached the project's **strongest** precise-mode pipeline
+  score (F1 ≈ 85% on CHIC gold data) in development — but it is **held back**, not
+  shipped. Its evaluation data carries train/test leakage, and the available CH corpus
+  is too small to resolve that cleanly, so a leak-free number can't yet be stood behind.
+  It will be released once that is fixed — the omission is about evidence quality, not a
+  weak model.
+- **Cypro-Minoan** is **parked — data-blocked.** The comparable published corpus
+  (Corazza et al. 2022's Sign2Vec_d) is copyright-restricted and non-redistributable,
+  and the ~250 open inscriptions are too few to train on. The planned Corazza 2022
+  replication is documented as blocked rather than abandoned.
+
+The unified detector architecture extends to both (see *Acknowledgements*); the blocker
+is data and leakage control, not the model.
 
 ---
 

@@ -56,7 +56,7 @@ Weights for the [BOTHROS](https://github.com/jmacdonald263/bothros) pipeline:
 photograph an ancient Aegean tablet, get the signs on it by catalogue code and
 reading.
 
-**🤗 Try the [live demo](https://huggingface.co/spaces/JMacD263/bothros-demo)** — no install, upload a photo.
+**🤗 Try the [live demo](https://huggingface.co/spaces/JMacD263/bothros-demo)** — no install, upload a photo. (Free-tier Space; if it shows "sleeping", give it ~30s to wake.)
 
 > **The name** — a [*bóthros*](https://en.wikipedia.org/wiki/Bothros) (βόθρος) is the pit Odysseus digs in
 > the *Odyssey*, pouring libations so the spirits of the dead rise to speak with him. Apt for a
@@ -69,6 +69,11 @@ reading.
   (AB-codes for Linear A; B-codes + readings for Linear B).
 - **`lb_class_to_reading.json`** — Linear B B-code → phonetic reading map.
 
+**Scope:** this release covers Linear A and Linear B. Cretan Hieroglyphic (a *stronger*
+internal result, held back over train/test leakage in too small a corpus) and Cypro-Minoan
+(parked — the comparable Corazza 2022 corpus is non-redistributable) are not in v0.1.0; see
+the [GitHub repo](https://github.com/jmacdonald263/bothros) for status.
+
 ## Results (held-out, leak-free)
 
 | metric | Linear A | Linear B | DeepScribe (cuneiform ref) |
@@ -77,6 +82,11 @@ reading.
 | pipeline E2E sign top-1 | 68.7% | 63.8% | 56.3% |
 | pipeline per-line F1 | 64.9% | 76.5% | — |
 | CER (lower better) | ~0.48 | 0.44 | 0.669 |
+
+*Per-line F1 is at the precise operating points (conf-filter 0.25 LA, n=133 / 0.30 LB,
+n=320). DeepScribe is a cross-domain reference (different script/corpus, hand-annotated GT,
+141 classes vs LA 374 / LB 142), not a head-to-head. Full methodology + reproduction:
+[GitHub repo](https://github.com/jmacdonald263/bothros).*
 
 *Cross-script: a Linear-B-only detector reads Linear A at **60.7% F1 zero-shot** — the
 basis for shipping one unified `aegean-unified` detector for both scripts.*
@@ -99,8 +109,9 @@ python3 -m bothros read your_tablet.jpg --script la   # or --script lb
 
 ## Licence
 **CC BY-NC-SA 4.0** — derived from research-only corpora: lineara.xyz + GORILA (Linear
-A images), SigLA + lineara.xyz (Linear A sign boxes + AB-code catalogue), DĀMOS +
-LinearBExplorer (Linear B).
+A images), **SigLA (Ester Salgarella & Simon Castellan)** + lineara.xyz (Linear A sign
+boxes + AB-code catalogue), DĀMOS (Federico Aurora) + LinearBExplorer (Linear B). No
+corpus images are redistributed — only the trained weights.
 The pipeline source code is MIT (see the GitHub repo). Non-commercial use only.
 
 ## Citation
@@ -138,6 +149,14 @@ def main():
     print("Uploading model card (README.md) ...")
     api.upload_file(path_or_fileobj=MODEL_CARD.encode(), path_in_repo="README.md",
                     repo_id=HF_REPO, repo_type="model")
+
+    # ship the weights licence inside the repo so the CC BY-NC-SA 4.0 terms travel with a
+    # selective *.pth download (the model card alone is skipped by allow_patterns filters)
+    weights_license = Path(__file__).resolve().parent.parent / "WEIGHTS_LICENSE"
+    if weights_license.exists():
+        print("Uploading WEIGHTS_LICENSE ...")
+        api.upload_file(path_or_fileobj=str(weights_license), path_in_repo="WEIGHTS_LICENSE",
+                        repo_id=HF_REPO, repo_type="model")
 
     if args.public:
         # hub 1.x: update_repo_settings (update_repo_visibility was removed)
